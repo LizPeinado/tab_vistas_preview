@@ -1,0 +1,30 @@
+//
+//  conversaciones_stack_pantallas.swift
+//  tab_view_Pruebas
+//
+//  Created by alumno on 11/6/26.
+//
+import SwiftUI
+
+struct ConversacionesControlVista: View {
+    @Environment(MensajesControl.self) var mensajes_control
+    
+    var body: some View {
+        NavigationStack {
+            ForEach(mensajes_control.conversaciones){ conversacion in
+                NavigationLink{
+                    MensajesPanntalla(mensajes: conversacion.mensajes)
+                }
+                label: {
+                    ConversacionPrevista(conversacion: conversacion)
+                    }
+                .buttonStyle(.plain)
+            }
+        }
+    }
+}
+
+#Preview{
+    ConversacionesControlVista()
+        .environment(MensajesControl())
+}

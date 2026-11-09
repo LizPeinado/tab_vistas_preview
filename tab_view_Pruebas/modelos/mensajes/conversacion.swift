@@ -1,0 +1,16 @@
+//
+//  conversacion.swift
+//  tab_view_Pruebas
+//
+//  Created by alumno on 11/6/26.
+//
+import Foundation
+
+struct Conversacion: Identifiable{
+    var id = UUID()
+    
+    var remitente: String
+    var receptor: String
+    
+    var mensajes: [Mensaje]
+}
