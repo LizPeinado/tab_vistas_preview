@@ -18,3 +18,8 @@ struct tab_view_pruebasApp: App {
         }
     }
 }
+
+#Preview {
+    ControlHogarVista()
+        .environment(MensajesControl())
+}

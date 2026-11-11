@@ -12,12 +12,12 @@ struct ControlHogarVista: View {
     
     var body: some View {
         TabView {
-            Tab("Crear", systemImage: "numbers.pa"){
-                Text("etiqueta")
+            Tab("Musica", systemImage: "music.note.list"){
+                Musica()
             }
             
-            Tab("Hogar", systemImage: "apple.homekit"){
-                Hogar()
+            Tab("Biografia", systemImage: "apple.homekit"){
+                Biografia()
             }
             
             Tab("Mensajes", systemImage: "message"){
